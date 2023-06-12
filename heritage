@@ -1,0 +1,78 @@
+using System;
+
+public abstract class Animal
+{
+    public abstract void Deplacer();
+    
+    public void Manger()
+    {
+        Console.WriteLine("dans cette list il y a des herbivores, carnivores  et omnivore ");
+    }
+}
+
+public class Humain : Animal
+{
+    public override void Deplacer()
+    {
+        Console.WriteLine("L'humain marche sur deux jambes.");
+    }
+}
+
+public class Singe : Animal
+{
+    public override void Deplacer()
+    {
+        Console.WriteLine("Le singe se déplace avec ses membres.");
+    }
+}
+
+public class Elephant : Animal
+{
+    public override void Deplacer()
+    {
+        Console.WriteLine("L'éléphant marche sur quatre pattes.");
+    }
+}
+
+public class Tortue : Animal
+{
+    public override void Deplacer()
+    {
+        Console.WriteLine("La tortue se déplace avec quatre pattes.");
+    }
+}
+
+public class Lézard : Animal
+{
+    public override void Deplacer()
+    {
+        Console.WriteLine("Le lézard utilise les quatre pattes.");
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Animal humain = new Humain();
+        humain.Deplacer();
+        humain.Manger();
+        
+        Animal singe = new Singe();
+        singe.Deplacer();
+        singe.Manger();
+        
+        Animal elephant = new Elephant();
+        elephant.Deplacer();
+        elephant.Manger();
+        
+        Animal tortue = new Tortue();
+        tortue.Deplacer();
+        tortue.Manger();
+        
+        Animal lézard = new Lézard();
+        lézard.Deplacer();
+        lézard.Manger();
+    }
+}
+
